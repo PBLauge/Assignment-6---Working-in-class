@@ -20,6 +20,32 @@ public class PersonManager
     {
     }
     
+    public List<Teacher> getAllTeachers()
+    {
+        List<Teacher> listOfTeachers = new ArrayList<>();
+        for (Person person : persons)
+        {
+            if(person.getClass()==Teacher.class)
+            {
+                listOfTeachers.add((Teacher)person);
+            }
+        }
+        return listOfTeachers;
+    }
+    
+    public List<Student> getAllStudents()
+    {
+        List<Student> listOfStudents = new ArrayList<>();
+        for (Person person : persons)
+        {
+            if(person.getClass()==Student.class)
+            {
+                listOfStudents.add((Student)person);
+            }
+        }
+        return listOfStudents;
+    }
+    
     public List<Person> getAllPersons()
     {
         return persons;

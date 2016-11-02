@@ -32,7 +32,7 @@ public class Teacher extends Person
         if(subjects.size()>0)
             mainSubject = subjects.get(0);
         
-        return super.toString() + "\t\t" + initials + "\t" + salary 
+        return super.toString() + "\t" + initials + "\t\t" + salary 
                 + "\t" + mainSubject; 
     }
     

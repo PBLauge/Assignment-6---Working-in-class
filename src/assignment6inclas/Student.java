@@ -94,7 +94,7 @@ public class Student extends Person
     public String toString()
     {
         return super.toString() + 
-                "\t" + education + "\t" + getAverageGrade(); //To change body of generated methods, choose Tools | Templates.
+                "\t" + education + "\t\t" + getAverageGrade(); //To change body of generated methods, choose Tools | Templates.
     }
     
     
