@@ -14,11 +14,12 @@ import java.util.List;
  */
 public class Test
 {
-    List<Person> persons;
+    
     
     public void startTest()
     {
-        persons = new ArrayList<>();
+        PersonManager personManager = new PersonManager();
+        
         Person daniel = new Person(0, "Daniel");
         daniel.setEmail("daniel666@hotmail.com");
         Person jeppe = new Person(1337, "Jeppe");
@@ -26,9 +27,9 @@ public class Test
         Person peter = new Person(666, "Peter");
         peter.setEmail("pgn@easv.dk");
         
-        persons.add(daniel);
-        persons.add(jeppe);
-        persons.add(peter);
+        personManager.addPerson(daniel);
+        personManager.addPerson(jeppe);
+        personManager.addPerson(peter);
         
         Teacher bent = new Teacher(1, "Bent", "bht");
         bent.setSalary(34543);
@@ -40,8 +41,8 @@ public class Test
         stig.addSubject("ITO");
         stig.addSubject("Unity game programming");
         
-        persons.add(bent);
-        persons.add(stig);
+        personManager.addPerson(bent);
+        personManager.addPerson(stig);
         
         Student mads = new Student(10, "Mads", "CS");
         GradeInfo gi1 = new GradeInfo("SCO", 7);
@@ -53,7 +54,10 @@ public class Test
         mads.addGrade(gi3);
         mads.addGrade(gi4);
         
-        persons.add(mads);
+        personManager.addPerson(mads);
+        //personManager.removePerson(0);
+        
+        List<Person> persons = personManager.getAllPersons();
         
         System.out.println("ID\tNAME\tEMAIL\t\tINITIALS\tSALARY\tMAIN");
         for (Person person : persons)

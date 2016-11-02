@@ -80,4 +80,13 @@ public class Person
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object obj)
+    {
+        Person otherPerson = (Person)obj;
+        return this.id == otherPerson.getId(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+
 }
